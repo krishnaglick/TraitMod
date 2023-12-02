@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Obeliskial_Content;
 
-namespace TraitMod
+namespace Voodoo2
 {
     [HarmonyPatch]
     internal class Traits

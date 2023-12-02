@@ -3,7 +3,7 @@ using BepInEx.Logging;
 using HarmonyLib;
 using static Obeliskial_Essentials.Essentials;
 
-namespace TraitMod
+namespace Voodoo2
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     [BepInDependency("com.stiffmeds.obeliskialessentials")]
