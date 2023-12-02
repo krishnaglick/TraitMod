@@ -1,4 +1,7 @@
-﻿using HarmonyLib;
+﻿using UnityEngine;
+using BepInEx;
+using BepInEx.Logging;
+using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +12,8 @@ namespace TraitMod
     [HarmonyPatch]
     internal class Traits
     {
-        // list of your trait IDs
-        public static string[] myTraitList = { "exampletrait" };
+        public static string trait = "voodoo2";
+        public static string[] myTraitList = { Traits.trait };
 
         public static void myDoTrait(string _trait, ref Trait __instance)
         {
@@ -34,8 +37,11 @@ namespace TraitMod
             NPC[] teamNpc = MatchManager.Instance.GetTeamNPC();
 
             // activate traits
-            if (_trait == "exampletrait")
+            if (_trait == Traits.trait)
             {
+                Plugin.Log.LogInfo(_character);
+                Plugin.Log.LogInfo(_trait);
+                Plugin.Log.LogInfo(teamHero);
                 // do some things
             }
         }
